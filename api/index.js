@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 const corsOptions ={
-  origin:'http://localhost:3000', 
+  origin:'https://64878802d791b619f8784428--moonlit-gecko-af0ed5.netlify.app/', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
@@ -59,3 +59,5 @@ app.listen(5000,() => {
 //process.env.MONGO_URL
 
 //file.originalname
+
+//'http://localhost:3000'
