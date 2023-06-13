@@ -13,7 +13,7 @@ export default function Register() {
     setError(false);
     try{
     e.preventDefault();
-    const res = await axios.post("http://localhost:5000/api/auth/register", {
+    const res = await axios.post("https://bruks-blog.onrender.com/api/auth/register", {
       username,
       email,
       password,
