@@ -14,12 +14,13 @@ dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
-const corsOptions ={
+/*const corsOptions ={
   origin:'https://64880ff432e59c67f473f949--stellar-banoffee-2b3224.netlify.app/', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
+*/
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
