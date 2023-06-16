@@ -38,7 +38,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
  const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, "images");
+      cb(null, "https://bruks-blog.onrender.com/images");
       
     },
     filename: (req, file, cb) => {
