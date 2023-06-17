@@ -26,8 +26,6 @@ export default function Write() {
       try{
         await axios.post("https://bruks-blog.onrender.com/api/upload", data);
         console.log("correct");
-        setSuccess(true);
-        console.log(success);
       }catch(err){
 
       }
@@ -35,6 +33,8 @@ export default function Write() {
     try{
    const res = await axios.post("https://bruks-blog.onrender.com/api/posts", newPost);
    console.log(res.data._id);
+       setSuccess(true);
+        console.log(success);
     }catch(err){
 
     }
