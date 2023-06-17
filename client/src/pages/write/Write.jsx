@@ -33,7 +33,7 @@ export default function Write() {
       }
     }
     try{
-   const res = await axios.post("https://bruks-blog.onrender.com/api/posts", newPost);
+   //const res = await axios.post("https://bruks-blog.onrender.com/api/posts", newPost);
   
     }catch(err){
 
