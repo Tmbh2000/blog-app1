@@ -8,6 +8,7 @@ export default function Write() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,14 +25,16 @@ export default function Write() {
       newPost.photo = filename;
       try{
         await axios.post("https://bruks-blog.onrender.com/api/upload", data);
-        console.log("correct")
+        console.log("correct");
+        setSuccess(true);
+        console.log(success);
       }catch(err){
 
       }
     }
     try{
    const res = await axios.post("https://bruks-blog.onrender.com/api/posts", newPost);
-   window.location.replace("https://64882cd98aa7617ac521268b--stellar-banoffee-2b3224.netlify.app/post/" + res.data._id);
+  // window.location.replace("https://64882cd98aa7617ac521268b--stellar-banoffee-2b3224.netlify.app/post/" + res.data._id);
     }catch(err){
 
     }
@@ -69,6 +72,7 @@ export default function Write() {
             ></textarea>
         </div>
         <button className="writesubmit" type="submit">Publish</button>
+         {success && <span style={{color: "green", marginTop: "10px", display:"flex",justifyContent:"center"}}>Your post has been published!</span> }
        </form>
     </div>
   )
