@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 const corsOptions ={
-  origin:'https://https://64882cd98aa7617ac521268b--stellar-banoffee-2b3224.netlify.app', 
+  origin:'https://stellar-banoffee-2b3224.netlify.app', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
