@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('frontend') {
+                dir('client') {
                     sh 'npm install'
                     sh 'npm run build'
                 }
@@ -13,7 +13,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                dir('frontend') {
+                dir('client') {
                     sh 'npm test'
                 }
             }
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                dir('backend') {
+                dir('api') {
                     sh 'npm install'
                     sh 'npm start'
                 }
